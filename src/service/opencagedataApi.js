@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getUserInfo = async ({ latitude, longitude }) => {
-  const apiKey = 'd4683b09d0c94ec0aebf0b2e043decbf';
+  const apiKey = import.meta.env.VITE_OPENCAGEDATA_KEY;
   const urlPosition = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}`;
   const { data } = await axios.get(urlPosition, {
     params: {
@@ -9,5 +9,7 @@ export const getUserInfo = async ({ latitude, longitude }) => {
       language: 'en',
     },
   });
-  return data;
+
+  const currenty = data.results[0].annotations.currency.iso_code;
+  return currenty;
 };

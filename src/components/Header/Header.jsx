@@ -5,7 +5,7 @@ import { MdCurrencyExchange } from 'react-icons/md';
 
 import styles from './Header.module.css';
 
-const Header = () => {
+const Layoute = () => {
   const addActive = ({ isActive }) => (isActive ? styles.active : styles.link);
   return (
     <>
@@ -27,7 +27,7 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-       //✔ Add base currency here !!!
+        <span> //✔ Add base currency here !!!</span>
       </header>
       <Suspense fallback={null}>
         <Outlet />
@@ -36,4 +36,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Layoute;
