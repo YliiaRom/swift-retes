@@ -11,6 +11,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   background: var(--color-mainBackground);
+  background: #000;
   min-height: 100vh;
 
   font-style: normal;

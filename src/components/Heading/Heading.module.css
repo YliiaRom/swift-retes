@@ -25,4 +25,5 @@
 .info {
   composes: title;
   color: #adcb28;
+  color: var(--color-primary);
 }

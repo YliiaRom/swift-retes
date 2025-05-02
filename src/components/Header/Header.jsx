@@ -4,8 +4,15 @@ import { Outlet, NavLink } from 'react-router-dom';
 import { MdCurrencyExchange } from 'react-icons/md';
 
 import styles from './Header.module.css';
+import { selectorBaseCurrency } from '../../redux/currency/slice';
+import SelectRates from '../../components/SelectRates/SelectRates';
+import { useSelector } from 'react-redux';
 
 const Layoute = () => {
+  const currency = useSelector(selectorBaseCurrency);
+  // const currency = useSelector(selectorBaseCurrency);
+
+  // const addActive = ({ isActive }) => (isActive ? styles.active : styles.link);
   const addActive = ({ isActive }) => (isActive ? styles.active : styles.link);
   return (
     <>
@@ -15,6 +22,9 @@ const Layoute = () => {
           <nav>
             <ul className={styles.nav}>
               <li>
+                {/* <NavLink to="/" className={addActive}>
+                  Home
+                </NavLink> */}
                 <NavLink to="/" className={addActive}>
                   Home
                 </NavLink>
@@ -27,8 +37,10 @@ const Layoute = () => {
             </ul>
           </nav>
         </div>
-        <span> //✔ Add base currency here !!!</span>
+        {currency && <SelectRates />}
+        {currency && <p className={styles.currency}> {currency}</p>}
       </header>
+
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>

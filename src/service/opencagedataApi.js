@@ -10,6 +10,5 @@ export const getUserInfo = async ({ latitude, longitude }) => {
     },
   });
 
-  const currenty = data.results[0].annotations.currency.iso_code;
-  return currenty;
+  return data;
 };

@@ -4,7 +4,8 @@
 
   justify-content: space-between;
   padding: 20px 10px;
-
+  flex-wrap: wrap;
+  gap: 10px;
   background-color: var(--color-mainBackgroun);
 
   box-shadow: 0px 2px 10px 1px var(--color-dark);
@@ -27,11 +28,12 @@
   margin-right: 30px;
   width: 40px;
   height: 40px;
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .link {
   color: var(--color-light);
+  color: #616060;
   font-size: var(--font-medium);
   font-weight: 700;
 
@@ -46,14 +48,14 @@
 
 .active {
   composes: link;
-  color: var(--color-white);
-  background-color: var(--color-accent);
+  color: #898585;
 
   padding: 6px 12px;
   border-radius: 4px;
 
   transform: scale(1);
   pointer-events: none;
+  border: 2px solid #999;
 }
 
 .link:hover,
@@ -62,5 +64,5 @@
 }
 
 .currency {
-  color: var(--color-accent);
+  color: var(--color-primary);
 }

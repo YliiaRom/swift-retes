@@ -1,6 +1,8 @@
 div .react-select__control {
-  background-color: transparent;
-  border: 2px solid var(--color-accent);
+  background-color: #999;
+  /* background: linear-gradient(90deg, #4d4f4f 2%, #999 30%, #999, #0f0b0b); */
+
+  border: 2px solid var(--color-gray);
   transition: var(--animation-cubicBezier);
 }
 
@@ -9,7 +11,7 @@ div .react-select__control:hover {
 }
 
 div .react-select__single-value {
-  color: var(--color-accent);
+  color: #fff;
 }
 
 .react-select__input {
@@ -17,16 +19,22 @@ div .react-select__single-value {
 }
 
 .react-select__control .react-select__menu {
+  /* background: linear-gradient(90deg, #6bf6cd, #999, #0f0b0b); */
   background-color: transparent;
 }
 
+/* =========фон  */
 div .react-select__menu {
-  background-color: transparent;
+  background: linear-gradient(90deg, #023236 2%, #5b9095 30%, #999, #0f0b0b);
 }
+
+/* =========style-option */
 
 .react-select__menu .react-select__option--is-focused {
-  background-color: var(--color-primary);
+  background-color: #fff;
 }
 .react-select__menu .react-select__option--is-selected {
-  background-color: var(--color-accent);
+  box-shadow: -1px -1px 2px #fff, 2px 2px 4px #000;
+  background-color: #999;
+  border-radius: 3px;
 }

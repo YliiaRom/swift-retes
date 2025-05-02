@@ -3,7 +3,7 @@
 
   border-style: none;
 
-  background-color: transparent;
+  background-color: #999;
   border-radius: 8px;
 
   font-size: 16px;
@@ -13,7 +13,7 @@
 
   transition: all 0.5s ease-in-out;
 
-  color: #fff;
+  color: #cac2c2;
 
   cursor: pointer;
 }
@@ -30,4 +30,7 @@
 .box {
   display: flex;
   align-items: center;
+  box-shadow: inset 0px 0px 40px hsl(180, 1%, 72%);
+  padding: 0px 10px;
+  border-radius: 7px;
 }
